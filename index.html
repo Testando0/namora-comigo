@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora Comigo?</title>
+    <link rel="shortcut icon" href="fhttps://cdn-icons-png.flaticon.com/256/10174/10174277.png">
+</head>
+<style>
+    body{
+        background-color: red;
+    }
+    h1{
+        padding-top: 1rem;;
+    }
+    .painel{
+        top: 20rem;
+        margin: auto;
+        padding: 1rem;
+        width:90%;
+        max-width: 500px;
+        height: 500px;
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #sim, #nao{
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: solid 2px white;
+        border-radius: 10px;
+        color: white;
+    }
+    #sim{
+        margin: 0 10px 0 -50px 0px;
+    }
+    #nao{
+        position: absolute;
+    }
+    .botoes{
+        align-items: center;
+        padding-bottom: 1rem;
+        margin-left:-3rem;
+    }
+    button:hover{
+        cursor:pointer;
+    }
+</style>
+<body>
+    <section class="painel">
+        <h1>Feliz Dia dos Namorados</h1>
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinhos-fofos-coracoes.gif" >
+        <h2>Aceita namorar comigo?</h2>
+        <div class="botoes">
+          
+            <a href="https://www.youtube.com/watch?v=0mJMW2CzTiA" target="_blank"><button id="sim" onclick="parabens()">Sim</button></a>
+            <button id="nao" onmouseover="fuja()">Não!</button>
+        </div>
+    </section>
+    
+<script>
+    function fuja(){
+        var botaoNao = document.getElementById("nao");
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+
+    function parabens(){
+        alert("Parabéns! Agora estamos namorando 🤍🤍🤍🤍🤍🤍🤍🤍🤍")
+    }
+</script>
+
+</body>
+</html>
